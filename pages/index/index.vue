@@ -34,7 +34,12 @@
 				</view>
 			</view>
 			<CustomDiv :title="'专属服务'" :url="'/pages/about/about'" class='space-30'>
-				<view>专属服务块</view>
+				<view class="server-content">
+					<IconAndTitle :title="'自助服务'" iconName='wangluozizhufuwu'></IconAndTitle>
+					<IconAndTitle :title="'进度查询'" iconName='jindudengdai'></IconAndTitle>
+					<IconAndTitle :title="'申请减员'" iconName='icon-person-jianshao'></IconAndTitle>
+					<IconAndTitle :title="'活动专区'" iconName='liwuhuodong'></IconAndTitle>
+				</view>
 			</CustomDiv>
 			<CustomDiv :title="'政策解读'" :url="'1'" class='space-30'>
 				<view>政策解读块</view>
@@ -42,31 +47,30 @@
 			<CustomDiv :title="'社保解析'" :url="'2'" class='space-30'>
 				<view>社保解析块</view>
 			</CustomDiv>
-			<CustomDiv :title="'自助工具'" :url="'3'"class='space-30'>
-				<view>自助工具块</view>
-			</CustomDiv>
-			<CustomDiv :title="'新闻资讯'" :url="'4'" class='space-30'>
-				<view>新闻资讯块</view>
+			<CustomDiv :title="'查询工具'" :url="'4'" class='space-30'>
+				<view>查询工具块</view>
 			</CustomDiv>
 			<CustomDiv :title="'关于我们'" :url="'5'" class='space-30'>
-				<view>关于我们块</view>
+				<view class="home-about">
+					<view></view>
+					<view>小豆企服是一家SAAS服务云智慧平台,平台致力于为全国用户提供’互联网十人资”服务，为全国企业提供一站式“互联网＋薪酬”服务,为个人提供便捷的社会保障服务,帮助企业以极高的效率完成人员管理，协助个业构建自性云昔牛态系统快谏提高个业者争力.</view>
+				</view>
 			</CustomDiv>
 		</view>
 	</view>
 </template>
 
 <script setup lang="ts">
-	import CustomDiv from '../../components/CustomDiv/CustomDiv.vue'
+	import CustomDiv from '../../components/CustomDiv/CustomDiv.vue';
+	import IconAndTitle from '../../components/IconAndTitle/IconAndTitle.vue'
 </script>
 
-<style>
+<style scoped>
 	.content {
 		display: flex;
+		flex: 1;
 		flex-direction: column;
-		/* align-items: center; */
-		/* justify-content: center; */
 		background: #f6f7f9;
-		height: 100vh;
 	}
 	.banner {
 		width: 100%;
@@ -87,7 +91,6 @@
 		background: #fff;
 		border-radius: 10rpx;
 		color: #666;
-		
 	}
 	.fast-main {
 		flex: 1;
@@ -165,6 +168,11 @@
 		color: #fff;
 	}
 	.space-30 {
+		margin-top: 30rpx;
+	}
+	.server-content {
+		display: flex;
+		flex-direction: row;
 		margin-top: 30rpx;
 	}
 </style>

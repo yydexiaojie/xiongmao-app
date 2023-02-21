@@ -4,7 +4,7 @@
 			<view class="custom-div-header-title">
 				{{ props.title || '标题' }}
 			</view>
-			<view class="custom-div-header-more" @click="gotoPage(props.url)">More></view>
+			<view class="custom-div-header-more" @click="gotoPage(props.url)">More</view>
 		</view>
 		<view class="custom-div-body">
 			<slot></slot>
@@ -15,18 +15,19 @@
 <script setup lang="ts">
 	interface ICustomDivProps {
 		title: string
-		url: string
-		moreTitle: string
+		url?: string
+		moreTitle?: string
 	}
 	const props = defineProps<ICustomDivProps>()
 	const gotoPage = (url: string) => {
+		if (!url) return
 		uni.navigateTo({
 			url: url
 		})
 	}
 </script>
 
-<style>
+<style scoped>
 .custom-div {
 	background: #fff;
 	border-radius: 10rpx;
@@ -50,7 +51,7 @@
 	color: #999;
 }
 .custom-div-body {
-	padding: 30rpx 0rpx;
+	/* padding: 30rpx 0rpx; */
 	/* font-size: 26rpx; */
 }
 </style>

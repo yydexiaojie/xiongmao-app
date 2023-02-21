@@ -13,5 +13,9 @@
 </script>
 
 <style>
+	@import url('static/iconfont/iconfont.css');
 	/*每个页面公共css */
+	body {
+		background: #f6f7f9;
+	}
 </style>
