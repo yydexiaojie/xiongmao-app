@@ -33,4 +33,7 @@
 	font-size: 70rpx;
 	color: #F15352;
 }
+.title-font {
+	margin-top: 10rpx;
+}
 </style>

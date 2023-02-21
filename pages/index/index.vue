@@ -41,19 +41,43 @@
 					<IconAndTitle :title="'活动专区'" iconName='liwuhuodong'></IconAndTitle>
 				</view>
 			</CustomDiv>
-			<CustomDiv :title="'政策解读'" :url="'1'" class='space-30'>
-				<view>政策解读块</view>
+			<CustomDiv :title="'政策解读'" :url="'1'" moreTitle='More' class='space-30'>
+				<view class="home-policy">
+					<PolicyItemComp title='买房政策' tip='买房政策要知道' imgName='icon' style='margin-right: 10rpx;'></PolicyItemComp>
+					<PolicyItemComp title='买车政策' tip='买车政策要知道' imgName='icon'></PolicyItemComp>
+				</view>
+				<view class="home-policy" style="margin-top: 10rpx;">
+					<PolicyItemComp title='买房政策' tip='买房政策要知道' imgName='icon' style='margin-right: 10rpx;'></PolicyItemComp>
+					<PolicyItemComp title='买车政策' tip='买车政策要知道' imgName='icon'></PolicyItemComp>
+				</view>
 			</CustomDiv>
-			<CustomDiv :title="'社保解析'" :url="'2'" class='space-30'>
+			<CustomDiv :title="'服务保障'" :url="'1'" moreTitle='More' class='space-30'>
+				<view class="home-policy">
+					<PolicyItemComp title='买房政策' tip='买房政策要知道' imgName='icon' style='margin-right: 10rpx;'></PolicyItemComp>
+					<PolicyItemComp title='买车政策' tip='买车政策要知道' imgName='icon'></PolicyItemComp>
+				</view>
+				<view class="home-policy" style="margin-top: 10rpx;">
+					<PolicyItemComp title='买房政策' tip='买房政策要知道' imgName='icon' style='margin-right: 10rpx;'></PolicyItemComp>
+					<PolicyItemComp title='买车政策' tip='买车政策要知道' imgName='icon'></PolicyItemComp>
+				</view>
+			</CustomDiv>
+			<CustomDiv :title="'社保解析'" :url="'2'" moreTitle='More' class='space-30'>
 				<view>社保解析块</view>
 			</CustomDiv>
-			<CustomDiv :title="'查询工具'" :url="'4'" class='space-30'>
-				<view>查询工具块</view>
+			<CustomDiv :title="'查询工具'" :url="'4'" moreTitle='More' class='space-30'>
+				<view class="home-tools">
+					<ToolsComp title="社保计算" imgName="icon"></ToolsComp>
+					<ToolsComp title="公积金计算" imgName="icon"></ToolsComp>
+					<ToolsComp title="养老金计算" imgName="icon"></ToolsComp>
+					<ToolsComp title="房贷计算" imgName="icon"></ToolsComp>
+				</view>
 			</CustomDiv>
-			<CustomDiv :title="'关于我们'" :url="'5'" class='space-30'>
+			<CustomDiv :title="'关于我们'" :url="'5'" moreTitle='More' class='space-30'>
 				<view class="home-about">
-					<view></view>
-					<view>小豆企服是一家SAAS服务云智慧平台,平台致力于为全国用户提供’互联网十人资”服务，为全国企业提供一站式“互联网＋薪酬”服务,为个人提供便捷的社会保障服务,帮助企业以极高的效率完成人员管理，协助个业构建自性云昔牛态系统快谏提高个业者争力.</view>
+					<view class="home-about-img">
+						<image src="../../static/logo.png" class="home-about-img"></image>
+					</view>
+					<view class="home-about-font">小豆企服是一家SAAS服务云智慧平台,平台致力于为全国用户提供’互联网十人资”服务，为全国企业提供一站式“互联网＋薪酬”服务,为个人提供便捷的社会保障服务,帮助企业以极高的效率完成人员管理，协助个业构建自性云昔牛态系统快谏提高个业者争力.</view>
 				</view>
 			</CustomDiv>
 		</view>
@@ -62,7 +86,9 @@
 
 <script setup lang="ts">
 	import CustomDiv from '../../components/CustomDiv/CustomDiv.vue';
-	import IconAndTitle from '../../components/IconAndTitle/IconAndTitle.vue'
+	import IconAndTitle from '../../components/IconAndTitle/IconAndTitle.vue';
+	import ToolsComp from '../../components/ToolsComp/ToolsComp.vue';
+	import PolicyItemComp from '../../components/PolicyItemComp/PolicyItemComp.vue';
 </script>
 
 <style scoped>
@@ -84,6 +110,7 @@
 	}
 	.main {
 		padding: 0rpx 30rpx;
+		padding-bottom: 40rpx;
 	}
 	.fast-goto {
 		display: flex;
@@ -174,5 +201,31 @@
 		display: flex;
 		flex-direction: row;
 		margin-top: 30rpx;
+	}
+	.home-policy {
+		margin-top: 30rpx;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+	.home-tools {
+		margin-top: 30rpx;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+	.home-about {
+		display: flex;
+		/* align-items: center; */
+		margin-top: 30rpx;
+	}
+	.home-about-img {
+		width: 120rpx;
+		height: 120rpx;
+	}
+	.home-about-font {
+		margin-left: 20rpx;
+		font-size: 26rpx;
+		line-height: 36rpx;
 	}
 </style>

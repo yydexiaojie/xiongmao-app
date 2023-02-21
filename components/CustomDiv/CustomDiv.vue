@@ -4,7 +4,7 @@
 			<view class="custom-div-header-title">
 				{{ props.title || '标题' }}
 			</view>
-			<view class="custom-div-header-more" @click="gotoPage(props.url)">More</view>
+			<view class="custom-div-header-more" @click="gotoPage(props.url)">{{ props.moreTitle }}</view>
 		</view>
 		<view class="custom-div-body">
 			<slot></slot>
