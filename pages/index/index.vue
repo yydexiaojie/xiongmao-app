@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		<!-- <swiper class="swiper" circular :indicator-dots="true" :autoplay="true" :interval="2000"
+		<swiper class="swiper" circular :indicator-dots="true" :autoplay="true" :interval="2000"
 			:duration="500">
 			<swiper-item>
 				<view class="swiper-item" style="background: red;">A</view>
@@ -11,7 +11,7 @@
 			<swiper-item>
 				<view class="swiper-item" style="background: blue;">C</view>
 			</swiper-item>
-		</swiper> -->
+		</swiper>
 		<!-- <view class="banner"></view> -->
 		<view class="main">
 			<view class="fast-goto">
@@ -26,7 +26,7 @@
 					</view>
 					<view class="fast-main-block fast-main-right">
 						<View class="fast-main-right-btn">补缴社保</View>
-						<View class="fast-main-right-btn">补缴公积金</View>
+						<View class="fast-main-right-btn bg-right">补缴公积金</View>
 					</view>
 				</view>
 				<view class="fast-tip">
@@ -98,6 +98,16 @@
 		flex-direction: column;
 		background: #f6f7f9;
 	}
+	.swiper {
+		width: 100%;
+		height: 300rpx;
+	}
+	.swiper-item {
+		display: block;
+		height: 300rpx;
+		line-height: 300rpx;
+		text-align: center;
+	}
 	.banner {
 		width: 100%;
 		height: 300rpx;
@@ -109,8 +119,7 @@
 		height: 100rpx;
 	}
 	.main {
-		padding: 0rpx 30rpx;
-		padding-bottom: 40rpx;
+		padding: 40rpx 30rpx;
 	}
 	.fast-goto {
 		display: flex;
@@ -137,7 +146,8 @@
 		margin-right: 0rpx;
 	}
 	.fast-main-left {
-		background: #A6AAE3;
+		background: #acd360;
+		color: #fff;
 	}
 	.fast-main-left-goto {
 		display: flex;
@@ -149,12 +159,13 @@
 	}
 	.fast-main-left-btn {
 		flex: 1;
-		border: 1rpx #fff solid;
+		border: 1rpx #f77213 solid;
 		padding: 10rpx;
 		line-height: 40rpx;
 		border-radius: 40rpx;
 		margin-right: 10rpx;
 		text-align: center;
+		color: #f77213;
 	}
 	.fast-main-left-goto > .fast-main-left-btn:last-child{
 		margin-right: 0rpx;
@@ -169,13 +180,18 @@
 	}
 	.fast-main-right-btn {
 		display: flex;
+		flex: 1;
 		align-items: center;
-		justify-content: center;
-		background: #A6AAE3;
-		height: 50%;
+		justify-content: start;
+		background: #59acfc;
+		color: #fff;
 		border-radius: 10rpx;
-		text-align: center;
 		margin-bottom: 20rpx;
+		padding: 10rpx 30rpx;
+	}
+	.bg-right {
+		background: #55d8c1;
+		box-shadow: #31a759;
 	}
 	.fast-main-right > .fast-main-right-btn:last-child {
 		margin-bottom: 0rpx;
