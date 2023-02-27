@@ -4,7 +4,9 @@
 			<FromItemComp title="姓名" tipInfo="(测试)" class='form-item'>
 				ceshi
 			</FromItemComp>
-			<FromItemComp title="姓名" tipInfo="(测试)" class='form-item'></FromItemComp>
+			<FromItemComp title="姓名" tipInfo="(测试)" class='form-item'>
+				
+			</FromItemComp>
 			<FromItemComp title="姓名" tipInfo="(测试)" class='form-item'></FromItemComp>
 			<FromItemComp title="姓名" tipInfo="(测试)" class='form-item'></FromItemComp>
 		</view>
@@ -12,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-	import FromItemComp from '../../components/FromItemVomp/FromItemVomp.vue';
+	import FromItemComp from '../../components/FromItemComp/FromItemComp.vue';
 </script>
 
 <style scoped>

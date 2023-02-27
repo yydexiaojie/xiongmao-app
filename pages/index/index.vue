@@ -33,15 +33,15 @@
 					<view class="fast-tip-label">NEW</view>
 				</view>
 			</view>
-			<CustomDiv :title="'专属服务'" :url="'/pages/about/about'" class='space-30'>
+			<CustomDiv :title="'专属服务'" :url="'/pages/about/about'" :iconName="'zhuanshufuwu'" class='space-30'>
 				<view class="server-content">
-					<IconAndTitle :title="'自助服务'" iconName='wangluozizhufuwu'></IconAndTitle>
-					<IconAndTitle :title="'进度查询'" iconName='jindudengdai'></IconAndTitle>
-					<IconAndTitle :title="'申请减员'" iconName='icon-person-jianshao'></IconAndTitle>
-					<IconAndTitle :title="'活动专区'" iconName='liwuhuodong'></IconAndTitle>
+					<IconAndTitle :title="'自助服务'" iconName='fuwu3'></IconAndTitle>
+					<IconAndTitle :title="'进度查询'" iconName='jindutiao'></IconAndTitle>
+					<IconAndTitle :title="'申请减员'" iconName='jianshao'></IconAndTitle>
+					<IconAndTitle :title="'活动专区'" iconName='liwu-huodong'></IconAndTitle>
 				</view>
 			</CustomDiv>
-			<CustomDiv :title="'政策解读'" :url="'1'" moreTitle='More' class='space-30'>
+			<CustomDiv :title="'政策解读'" :url="'1'" :iconName="'zhengce'" moreTitle='More' class='space-30'>
 				<view class="home-policy">
 					<PolicyItemComp title='买房政策' tip='买房政策要知道' imgName='icon' style='margin-right: 10rpx;'></PolicyItemComp>
 					<PolicyItemComp title='买车政策' tip='买车政策要知道' imgName='icon'></PolicyItemComp>
@@ -51,7 +51,7 @@
 					<PolicyItemComp title='买车政策' tip='买车政策要知道' imgName='icon'></PolicyItemComp>
 				</view>
 			</CustomDiv>
-			<CustomDiv :title="'服务保障'" :url="'1'" moreTitle='More' class='space-30'>
+			<CustomDiv :title="'服务保障'" :url="'1'" :iconName="'tuihuobaozhang'" moreTitle='More' class='space-30'>
 				<view class="home-policy">
 					<PolicyItemComp title='买房政策' tip='买房政策要知道' imgName='icon' style='margin-right: 10rpx;'></PolicyItemComp>
 					<PolicyItemComp title='买车政策' tip='买车政策要知道' imgName='icon'></PolicyItemComp>
@@ -61,7 +61,7 @@
 					<PolicyItemComp title='买车政策' tip='买车政策要知道' imgName='icon'></PolicyItemComp>
 				</view>
 			</CustomDiv>
-			<CustomDiv :title="'社保解析'" :url="'2'" moreTitle='More' class='space-30'>
+			<CustomDiv :title="'社保解析'" :url="'2'" :iconName="'jiexicanshu'" moreTitle='More' class='space-30'>
 				<view>社保解析块</view>
 			</CustomDiv>
 			<CustomDiv :title="'查询工具'" :url="'4'" moreTitle='More' class='space-30'>
@@ -72,7 +72,7 @@
 					<ToolsComp title="房贷计算" imgName="icon"></ToolsComp>
 				</view>
 			</CustomDiv>
-			<CustomDiv :title="'关于我们'" :url="'5'" moreTitle='More' class='space-30'>
+			<CustomDiv :title="'关于我们'" :url="'5'" :iconName="'guanyu'" moreTitle='More' class='space-30'>
 				<view class="home-about">
 					<view class="home-about-img">
 						<image src="../../static/logo.png" class="home-about-img"></image>
@@ -182,7 +182,7 @@
 		display: flex;
 		flex: 1;
 		align-items: center;
-		justify-content: start;
+		/* justify-content: start; */
 		background: #59acfc;
 		color: #fff;
 		border-radius: 10rpx;

@@ -2,7 +2,8 @@
 	<view class="custom-div">
 		<view class="custom-div-header">
 			<view class="custom-div-header-title">
-				{{ props.title || '标题' }}
+				<view class="custom-div-icon" :class="`iconfont xm-${props.iconName}`" v-if="props.iconName"></view>
+				<view>{{ props.title || '标题' }}</view>
 			</view>
 			<view class="custom-div-header-more" @click="gotoPage(props.url)">{{ props.moreTitle }}</view>
 		</view>
@@ -13,12 +14,17 @@
 </template>
 
 <script setup lang="ts">
+import { toRefs } from "vue";
 	interface ICustomDivProps {
 		title: string
 		url?: string
+		iconName?: string
+		iconColor?: string
 		moreTitle?: string
 	}
 	const props = defineProps<ICustomDivProps>()
+	const {iconColor} = toRefs(props)
+	
 	const gotoPage = (url: string) => {
 		if (!url) return
 		uni.navigateTo({
@@ -45,10 +51,17 @@
 	font-size: 600;
 	line-height: 50rpx;
 	font-size: 36rpx;
+	display: flex;
+	flex-direction: row;
+}
+.custom-div-icon {
+	font-size: 45rpx;
+	margin-right: 20rpx;
+	color: v-bind(iconColor || '#F15352') 
 }
 .custom-div-header-more {
 	font-size: 20rpx;
-	color: #999;
+	color: #C0A369;
 }
 .custom-div-body {
 	/* padding: 30rpx 0rpx; */
