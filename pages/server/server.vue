@@ -4,7 +4,9 @@
 			<FromItemComp title="姓名" tipInfo="(测试)" class='form-item'>
 				ceshi
 			</FromItemComp>
-			<FromItemComp title="姓名" tipInfo="(测试)" class='form-item'></FromItemComp>
+			<FromItemComp title="姓名" tipInfo="(测试)" class='form-item'>
+				
+			</FromItemComp>
 			<FromItemComp title="姓名" tipInfo="(测试)" class='form-item'></FromItemComp>
 			<FromItemComp title="姓名" tipInfo="(测试)" class='form-item'></FromItemComp>
 		</view>
