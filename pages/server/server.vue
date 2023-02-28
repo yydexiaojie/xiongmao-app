@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-	import FromItemComp from '../../components/FromItemVomp/FromItemVomp.vue';
+	import FromItemComp from '../../components/FromItemComp/FromItemComp.vue';
 </script>
 
 <style scoped>

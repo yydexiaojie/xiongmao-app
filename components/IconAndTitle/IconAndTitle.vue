@@ -1,6 +1,6 @@
 <template>
 	<view class="icon-title" @click="gotoPages(props.url)">
-		<view class="icon" :class="`iconfont icon-${props.iconName}`"></view>
+		<view class="icon" :class="`iconfont xm-${props.iconName}`"></view>
 		<view class="title-font">{{props.title}}</view>
 	</view>
 </template>
