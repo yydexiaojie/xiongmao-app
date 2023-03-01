@@ -1,4 +1,6 @@
-export const cityData = {
+import dayjs from 'dayjs'
+
+export const cityData = [{
 	label: '北京',
 	value: 'bj',
 	children: [
@@ -83,7 +85,7 @@ export const cityData = {
 			children: []
 		},
 	]
-}
+}]
 
 export const householdData = [
 	{
@@ -104,7 +106,7 @@ export const householdData = [
 	},
 ]
 
-export const joinTypeData = [
+export const renewalData = [
 	{
 		label: '新缴(首次在该城市参缴)',
 		value: '1',
@@ -119,7 +121,7 @@ export const joinTypeData = [
 	},
 ]
 
-export const slTypeData = [
+export const payTypeData = [
 	{
 		label: '社保',
 		value: '1',
@@ -137,3 +139,11 @@ export const slTypeData = [
 		value: '4',
 	},
 ]
+
+const monthArr = [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6]
+export const selectMonthData = monthArr.map((item: number) => {
+	return {
+		label: dayjs().add(item, 'M').format('YYYY-MM'),
+		value: dayjs().add(item, 'M').format('YYYYMM')
+	}
+})

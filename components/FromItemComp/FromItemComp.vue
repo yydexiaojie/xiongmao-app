@@ -24,11 +24,12 @@
 		flex-direction: row;
 		justify-content: space-between;
 		padding: 20rpx 0rpx;
+		line-height: 50rpx;
 	}
 	.from-item-left {
 		display: flex;
 		flex-direction: row;
-		line-height: 40rpx;
+		/* line-height: 40rpx; */
 	}
 	.from-item-left-tip {
 		font-size: 20rpx;
