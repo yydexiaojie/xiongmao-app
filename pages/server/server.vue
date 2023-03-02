@@ -15,6 +15,9 @@
 
 <script setup lang="ts">
 	import FromItemComp from '../../components/FromItemComp/FromItemComp.vue';
+	import { timeRangeData } from '../../tools/opts'
+	
+	console.log({timeRangeData})
 </script>
 
 <style scoped>

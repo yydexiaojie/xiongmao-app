@@ -1,3 +1,5 @@
+import dayjs from 'dayjs';
+
 export const cityData = {
 	label: '北京',
 	value: 'bj',
@@ -137,3 +139,13 @@ export const slTypeData = [
 		value: '4',
 	},
 ]
+
+const timeArr = [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7]
+
+export const timeRangeData = timeArr.map(item => {
+	console.log('----01:', dayjs().add(-6, 'M').format('YYYY-MM'))
+	return {
+		label: dayjs().add(item, 'M').format('YYYY-MM'),
+		value: dayjs().add(item, 'M').format('YYYYMM'),
+	}
+})
