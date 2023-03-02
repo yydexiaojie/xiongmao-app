@@ -1,0 +1,13 @@
+{
+  "hash": "b20f88f6",
+  "browserHash": "d9aefe1c",
+  "optimized": {
+    "dayjs": {
+      "src": "../../node_modules/dayjs/dayjs.min.js",
+      "file": "dayjs.js",
+      "fileHash": "b19904ff",
+      "needsInterop": true
+    }
+  },
+  "chunks": {}
+}

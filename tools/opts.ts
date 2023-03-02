@@ -1,6 +1,12 @@
+<<<<<<< HEAD
+import dayjs from 'dayjs';
+
+export const cityData = {
+=======
 import dayjs from 'dayjs'
 
 export const cityData = [{
+>>>>>>> 2a120b6554f41e66e2fd411ac4c50ab8764511ac
 	label: '北京',
 	value: 'bj',
 	children: [
@@ -144,6 +150,6 @@ const monthArr = [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6]
 export const selectMonthData = monthArr.map((item: number) => {
 	return {
 		label: dayjs().add(item, 'M').format('YYYY-MM'),
-		value: dayjs().add(item, 'M').format('YYYYMM')
+		value: dayjs().add(item, 'M').format('YYYYMM'),
 	}
 })
