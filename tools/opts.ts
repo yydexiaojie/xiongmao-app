@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import dayjs from 'dayjs';
 
-export const cityData = {
-=======
-import dayjs from 'dayjs'
-
 export const cityData = [{
->>>>>>> 2a120b6554f41e66e2fd411ac4c50ab8764511ac
 	label: '北京',
 	value: 'bj',
 	children: [
