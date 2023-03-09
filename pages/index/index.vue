@@ -20,7 +20,7 @@
 						<view class="fast-left-title-font">个人/企业社保</view>
 						<view class="fast-left-title-font">公积金一站式服务</view>
 						<view class="fast-main-left-goto">
-							<view class="fast-main-left-btn fs-26">社保缴纳</view>
+							<view class="fast-main-left-btn fs-26" @click="gotoNewPages('/pages/server/server')">社保缴纳</view>
 							<view class="fast-main-left-btn fs-26">缴公积金</view>
 						</view>
 					</view>
@@ -64,7 +64,7 @@
 			<CustomDiv :title="'社保解析'" :url="'2'" :iconName="'jiexicanshu'" moreTitle='More' class='space-30'>
 				<view>社保解析块</view>
 			</CustomDiv>
-			<CustomDiv :title="'查询工具'" :url="'4'" moreTitle='More' class='space-30'>
+			<CustomDiv :title="'查询工具'" :url="'/pages/toolpage/toolpage'" moreTitle='More' class='space-30'>
 				<view class="home-tools">
 					<ToolsComp title="社保计算" imgName="icon"></ToolsComp>
 					<ToolsComp title="公积金计算" imgName="icon"></ToolsComp>
@@ -89,6 +89,14 @@
 	import IconAndTitle from '../../components/IconAndTitle/IconAndTitle.vue';
 	import ToolsComp from '../../components/ToolsComp/ToolsComp.vue';
 	import PolicyItemComp from '../../components/PolicyItemComp/PolicyItemComp.vue';
+	
+	const gotoNewPages = (url: string) => {
+		console.log('url-->:', url)
+		if (!url) return
+		uni.switchTab({
+			url: url
+		})
+	}
 </script>
 
 <style scoped>

@@ -31,5 +31,10 @@
 }
 .picker-input-title {
 	margin-right: 10rpx;
+	font-size: 24rpx;
+}
+.picker-jiantou {
+	font-size: 15rpx;
+	color: #999;
 }
 </style>

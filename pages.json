@@ -52,7 +52,7 @@
             "path" : "pages/news/news",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "熊猫咨询",
+                "navigationBarTitleText": "熊猫资讯",
                 "enablePullDownRefresh": false
             }
             
@@ -91,7 +91,52 @@
             "path" : "pages/users/users",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "用户中心",
+                "navigationBarTitleText": "个人中心",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/toolpage/toolpage",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "自助工具",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/toolpage/slpage",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "计算器",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/toolpage/gjjpage",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "计算器",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/helppage/helppage",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "新手帮助",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/helppage/slquery",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "社保查询",
                 "enablePullDownRefresh": false
             }
             
@@ -123,7 +168,7 @@
 				"pagePath": "pages/news/news",
 				"iconPath": "static/extui.png",
 				"selectedIconPath": "static/extuiHL.png",
-				"text": "咨询"
+				"text": "资讯"
 			}, {
 				"pagePath": "pages/users/users",
 				"iconPath": "static/template.png",

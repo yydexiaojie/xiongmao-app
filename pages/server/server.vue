@@ -2,55 +2,36 @@
 	<view class="server">
 		<view class="server-content">
 			<FromItemComp title="参保人信息" tipInfo="" class='form-item'>
-				ceshi
+				<view class="form-item-info">
+					<view class="info-name">ceshi</view>
+					<view class="icon-jiantou" :class="`iconfont xm-youjiantou`"></view>
+				</view>
 			</FromItemComp>
 			<FromItemComp title="缴费城市" tipInfo="" class='form-item'>
-				<!-- <picker @change="(ev) => bindPickerChange(ev, 'city')" :value="selectState.cityIndex" :range="cityData">
-					<view class="picker-input">
-						<view class="picker-input-title">{{cityData[selectState.cityIndex].label}}</view>
-						<view class="picker-jiantou" :class="`iconfont xm-youjiantou`"></view>
-					</view>
-				</picker> -->
 				<PickerComp @pickerChange="(val) => bindPickerChange(val, 'city')" :value="selectState.cityIndex" :data="cityData" />
 			</FromItemComp>
 			<FromItemComp title="户口性质" tipInfo="" class='form-item'>
-				<!-- <picker @change="(ev) => bindPickerChange(ev, 'household')" :value="selectState.householdIndex" :range="householdData">
-					<view class="picker-input">
-						<view class="picker-input-title">{{householdData[selectState.householdIndex].label}}</view>
-						<view class="picker-jiantou" :class="`iconfont xm-youjiantou`"></view>
-					</view>
-				</picker> -->
 				<PickerComp @pickerChange="(val) => bindPickerChange(val, 'household')" :value="selectState.householdIndex" :data="householdData" />
 			</FromItemComp>
 			<FromItemComp title="缴费类型" tipInfo="" class='form-item'>
-				<!-- <picker @change="(ev) => bindPickerChange(ev, 'renewal')" :value="selectState.renewalIndex" :range="renewalData">
-					<view class="picker-input">
-						<view class="picker-input-title">{{renewalData[selectState.renewalIndex].label}}</view>
-						<view class="picker-jiantou" :class="`iconfont xm-youjiantou`"></view>
-					</view>
-				</picker> -->
 				<PickerComp @pickerChange="(val) => bindPickerChange(val, 'renewal')" :value="selectState.renewalIndex" :data="renewalData" />
 			</FromItemComp>
 			<FromItemComp title="参保类型" tipInfo="" class='form-item'>
-				<!-- <picker @change="(ev) => bindPickerChange(ev, 'pay')" :value="selectState.payTypeIndex" :range="payTypeData">
-					<view class="picker-input">
-						<view class="picker-input-title">{{payTypeData[selectState.payTypeIndex].label}}</view>
-						<view class="picker-jiantou" :class="`iconfont xm-youjiantou`"></view>
-					</view>
-				</picker> -->
 				<PickerComp @pickerChange="(val) => bindPickerChange(val, 'pay')" :value="selectState.payTypeIndex" :data="payTypeData" />
 			</FromItemComp>
 			<FromItemComp title="参保月份" tipInfo="" class='form-item'>
-				<!-- <picker @change="(ev) => bindPickerChange(ev, 'month')" :value="selectState.monthIndex" :range="selectMonthData">
-					<view class="picker-input">
-						<view class="picker-input-title">{{selectMonthData[selectState.monthIndex].label}}</view>
-						<view class="picker-jiantou" :class="`iconfont xm-youjiantou`"></view>
-					</view>
-				</picker> -->
 				<PickerComp @pickerChange="(val) => bindPickerChange(val, 'month')" :value="selectState.monthIndex" :data="selectMonthData" />
 			</FromItemComp>
-			<FromItemComp title="社保基数" tipInfo="(5869-31884)" class='form-item'></FromItemComp>
-			<FromItemComp title="公积金基数" tipInfo="(2500-31884)" class='form-item'></FromItemComp>
+			<FromItemComp title="社保基数" tipInfo="(5869-31884)" class='form-item'>
+				<input class="xm-input" type="number" @input="(ev) => bindPickerChange(ev, 'slbase')" :value="5869" placeholder="请输入要缴费基数" />
+			</FromItemComp>
+			<FromItemComp title="公积金基数" tipInfo="(2500-31884)" class='form-item'>
+				<input class="xm-input" type="number" @input="(ev) => bindPickerChange(ev, 'gjjbase')" :value="2500" placeholder="请输入要缴费基数" />
+			</FromItemComp>
+		</view>
+		<view class="from-submit">
+			<view class="submit-check"></view>
+			<view class="submit-btn">下一步</view>
 		</view>
 	</view>
 </template>
@@ -88,5 +69,32 @@
 .picker-jiantou {
 	font-size: 20rpx;
 	color: #666;
+}
+.xm-input {
+	height: 50rpx;
+	line-height: 50rpx;
+	font-size: 20rpx;
+	text-align: right;
+}
+.form-item-info {
+	display: flex;
+	flex-direction: row;
+	font-size: 20rpx;
+}
+.icon-jiantou {
+	font-size: 15rpx;
+	color: #999;
+	margin-left: 10rpx;
+}
+.from-submit {
+	border-radius: 20rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+	text-align: center;
+	color: #fff;
+	background: #C0A369;
+	font-size: 30rpx;
+	padding: 5rpx 0;
+	margin-top: 30rpx;
 }
 </style>
